@@ -1,0 +1,166 @@
+
+
+/* Anidamiento */
+/* ----------------------------------PAGINA "NUEVA VENTA"---------------------------------------- */
+
+/* ------------------------------------------------------------------------------------------------------- */
+
+
+
+#nva-venta {
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin-left: 5px;
+
+    
+.search-container {
+    
+    background-color: #d6d6d6;
+    border-radius: 15px;
+    padding: 20px;
+    width: 100%;
+    max-width: 1000px;
+    margin-bottom: 20px;
+}
+
+.search-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+input, select, button {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+}
+
+input[type="text"] {
+    flex: 1;
+}
+
+.client-search {
+    flex: 2;
+}
+
+.quantity-input {
+    width: 100px;
+}
+
+.product-search {
+    flex: 3;
+}
+
+.add-button {
+    background-color: #0099ff;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.divider {
+    height: 6px;
+    background-color: #e6c700;
+    width: 100%;
+    max-width: 1000px;
+    margin: 10px 0 20px 0;
+}
+
+.table-container {
+    background-color: #f5f5f5;
+    border-radius: 15px;
+    padding: 20px;
+    width: 100%;
+    max-width: 1000px;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+th {
+    padding: 30px;
+    background-color: #f0f0f0;
+    font-weight: bold;
+    color: #333;
+}
+
+td {
+    padding: 8px;
+    background-color: white;
+    border-radius: 5px;
+    margin: 2px;
+}
+
+.status-active {
+    color: green;
+}
+
+.action-buttons {
+    margin-top: 60px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    
+}
+
+.confirm-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.save-button {
+    background-color: #0099ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.text-button {
+    background: none;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    padding: 10px;
+    text-decoration: underline;
+}
+
+input:hover, select:hover,
+input:focus, select:focus {
+    box-shadow: 0 0 0 2px #dadada;
+    border: 2px solid rgb(238, 184, 37);
+}
+
+.confirm-button:hover, .confirm-button:focus{
+
+    background-color: #367c38;
+    
+}
+.save-button:hover, .save-button:focus, .add-button:hover, .add-button:focus{
+    background-color: #0c77be;
+}
+.text-button:hover, .text-button:focus{
+    box-shadow: 0 0 0 2px #dadada;
+    border: 2px solid rgb(212, 210, 210);
+    height: 41px;
+}
+
+
+}
