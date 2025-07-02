@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--SEO-->
+    <meta name="keyboards" content="sistema de ventas, registro de ventas, ventas, metricas, sistema para comercio, registro de clientes">
+    <meta name="author" content="Sistema de ventas VLO">
+
+    <!--BOOTSTRAP CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <!--ICONO VLO-->
+    <link rel="icon" type="image/png" href="../images/vlo.png"> 
+    <!--Font Awesome para los iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!--ANIMACIONES AOS-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    </style>
+    <title>Nueva Venta</title>
+    <!--CSS-->
+    <link rel="stylesheet" href="../css/styles.css">
+    
+    <!--BOOTSTRAP JS-->
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+
+  <!-- HEADER CON NAVBAR -->
+  
+  <header id="header">
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <!-- container -->
+      <div class="container-fluid">
+        <!-- logo -->
+        <a class="navbar-brand" href="../index.html">Magna</a>
+        
+        <!-- menu toggle -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <!-- navbar links -->
+        <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+          <!-- iconos -->
+          <div class="navbar-nav dropdown perfil">
+            <button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa-solid fa-user"></i>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <div class="profile-menu">
+                <a href="#" class="dropdown-item">
+                    <span class="icon-user"></span> Mi Perfil
+                </a>
+                <a href="#" class="dropdown-item">
+                    <span class="icon-gear"></span> Configuración
+                </a>
+                <a href="../pages/login.html" class="dropdown-item">
+                    <span class="icon-logout"></span> Cerrar Sesión
+                </a>
+            </div>
+            </ul>
+            
+          </div>
+          <div class="navbar-nav dropdown notificaciones">
+            <button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa-solid fa-bell"></i>
+            </button>
+            <ul class="dropdown-menu">
+              <div class="list-group menu">
+                <a href="#" class="list-group-item list-group-item-action" aria-current="true">
+                  <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">Nuevo ingreso</h5>
+                    <small>Peñaflor</small>
+                  </div>
+                  <p class="mb-1">Vinos</p>
+                  <small>Hace 5 min</small>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action">
+                  <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">Brahma cajon</h5>
+                    <small class="text-body-secondary">Quilmes</small>
+                  </div>
+                  <p class="mb-1">Stock bajo de producto</p>
+                  <small class="text-body-secondary">Hace 1 hora</small>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action">
+                  <div class="d-flex w-100 justify-content-between">
+                    <h6 class="mb-1">Ver todas las notificaciones</h6>
+                  </div>
+                  
+                </a>
+              </div>
+            </ul>
+            
+          </div>
+          
+          <!-- links -->
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                Repartos
+              </button>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                Artículos
+              </button>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="../pages/articulos.html">Ver Artículos</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                Caja
+              </button>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                Clientes
+              </button>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                Compras
+              </button>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                Informes
+              </button>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                Paramétricas
+              </button>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                Préstamos
+              </button>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                Proveedores
+              </button>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                Ventas
+              </button>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="../pages/ventas.html">Todas las ventas</a></li>
+                <li><a class="dropdown-item" href="#">Ventas de hoy</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      
+      </div>
+    </nav>
+  
+  </header>
+
+
+  <!--MAIN-->
+
+  <main id="nva-venta">
+    <div class="nueva-venta">
+      <!--filtros-->
+      <div class="search-container">
+        <div class="search-row">
+            <input type="text" class="client-search" placeholder="Buscar cliente...">
+            <select>
+                <option>Tipo de pago</option>
+                <option>Efectivo</option>
+                <option>Tarjeta</option>
+                <option>Transferencia</option>
+            </select>
+            <select>
+                <option>Tipo de cliente</option>
+                <option>Regular</option>
+                <option>Premium</option>
+                <option>Mayorista</option>
+            </select>
+        </div>
+        <div class="search-row">
+            <input type="text" class="quantity-input" placeholder="Cantidad">
+            <input type="text" class="product-search" placeholder="Buscar producto...">
+            <button class="add-button">Agregar</button>
+        </div>
+      </div>
+      <!--elemento divisor-->
+      <div class="divider"></div>
+      <!--body presupuesto-->
+      <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Cantidad</th>
+                    <th>Código</th>
+                    <th>Artículo</th>
+                    <th>Unidad</th>
+                    <th>Categorías</th>
+                    <th>Stock</th>
+                    <th>Precio Venta($)</th>
+                    <th>Estado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>376-U</td>
+                    <td>351 1L X 1</td>
+                    <td>1</td>
+                    <td>CERVEZAS</td>
+                    <td>210.00</td>
+                    <td>$ 1600.00</td>
+                    <td class="status-active">Activo</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>365-U</td>
+                    <td>1890 1L X 1</td>
+                    <td>1</td>
+                    <td>CERVEZAS</td>
+                    <td>35.16</td>
+                    <td>$ 2200.00</td>
+                    <td class="status-active">Activo</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>376</td>
+                    <td>351 1L X 6</td>
+                    <td>6</td>
+                    <td>CERVEZAS</td>
+                    <td>35.00</td>
+                    <td>$ 9300.00</td>
+                    <td class="status-active">Activo</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>002-U</td>
+                    <td>100 PIPERS 750CC X 1</td>
+                    <td>1</td>
+                    <td>DESTILADOS</td>
+                    <td>8.04</td>
+                    <td>$ 9000.00</td>
+                    <td class="status-active">Activo</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>353-6U</td>
+                    <td>1890 1L X 6</td>
+                    <td>6</td>
+                    <td>CERVEZAS</td>
+                    <td>5.86</td>
+                    <td>$ 12200.00</td>
+                    <td class="status-active">Activo</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>353</td>
+                    <td>1890 1L X 12</td>
+                    <td>12</td>
+                    <td>CERVEZAS</td>
+                    <td>2.93</td>
+                    <td>$ 23800.00</td>
+                    <td class="status-active">Activo</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="action-buttons">
+            <button class="confirm-button">Confirmar</button>
+            <button class="save-button">Guardar</button>
+            <button class="text-button">Limpiar</button>
+            <button class="text-button">Eliminar</button>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+
+
+  <!--FOOTER-->
+
+  <footer class="footer">
+
+        <div class="container">
+          <div class="footer-grid">
+
+            <!-- LOGO Y MAPA -->
+            <div class="footer-column">
+
+              <div class="logo-container">
+                <img src="../images/vlo.png" alt="VLO System" class="logo">
+                <h2 class="company-name">VLO System</h2>
+              </div>
+
+              <div class="map-container">
+                <img src="../images/Mapa-ubicacion-DM.png" alt="Company Location Map" class="map">
+              </div>
+            
+            </div>
+    
+
+            <!-- MENU PRINCIPAL -->
+            <div class="footer-column">
+
+              <h3 class="footer-heading">Menú principal</h3>
+              <nav>
+                <ul class="footer-links">
+                  <li><a href="#">Repartos</a></li>
+                  <li><a href="../pages/articulos.html">Artículos</a></li>
+                  <li><a href="#">Caja</a></li>
+                  <li><a href="#">Clientes</a></li>
+                  <li><a href="#">Compras</a></li>
+                  <li><a href="#">Informes</a></li>
+                  <li><a href="#">Paramétricas</a></li>
+                  <li><a href="#">Prestamos</a></li>
+                  <li><a href="#">Proveedor</a></li>
+                  <li><a href="../pages/ventas.html">Ventas</a></li>
+                </ul>
+              </nav>
+            </div>
+    
+            <!-- PERFIL -->
+            <div class="footer-column">
+              <h3 class="footer-heading">Perfil</h3>
+              <nav>
+                <ul class="footer-links">
+                  <li><a href="#">Mi perfil</a></li>
+                  <li><a href="#">Crear perfil</a></li>
+                  <li><a href="../pages/login.html">Cerrar sesión</a></li>
+                  <li><a href="#">Configuración de perfiles</a></li>
+                </ul>
+              </nav>
+            </div>
+    
+            <!-- CONFIGURACION -->
+            <div class="footer-column">
+              <h3 class="footer-heading">Configuración</h3>
+              <nav>
+                <ul class="footer-links">
+                  <li><a href="#">Programas</a></li>
+                  <li><a href="#">Configuración del sistema</a></li>
+                  <li><a href="#">Ayuda</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+    
+
+          <!--Copyright and Social Media -->
+          <div class="footer-bottom">
+            <p class="copyright">&copy;2025 VLO System. All rights reserved</p>
+            <div class="social-icons">
+              <a href="" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+              <a href="#" aria-label="Spotify"><i class="fab fa-spotify"></i></a>
+            </div>
+          </div>
+        </div>
+
+
+  </footer>
+
+
+  
+  <!--BOOTSTRAP JS-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+  <!--ANIMACIONES AOS-->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="./js/main.js"></script>
+</body>
+
+</html> 
